@@ -21,14 +21,14 @@ public class App
         /*ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments();*/
 
-        // WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://crm.geekbrains.space/user/login");
         driver.findElement(By.id("prependedInput")).sendKeys("Applanatest1");
         driver.findElement(By.id("prependedInput2")).sendKeys("Student2020!");
         driver.findElement(By.id("_submit")).click();
-        driver.findElement(By.xpath("//*[@id=\"main-menu\"]//span[text()='Проекты']")).click();
+       // driver.findElement(By.xpath("//*[@id=\"main-menu\"]//span[text()='Проекты']")).click();
         driver.findElement(By.xpath("//*[@id=\"main-menu\"]/ul/li[3]/ul/li[4]/a/span")).click();
         driver.findElement(By.xpath("//div[@class=\"pull-left btn-group icons-holder\"]/a")).click();
         driver.findElement(By.xpath("//input[@name=\"crm_project[name]\"]")).sendKeys("Наименование");
